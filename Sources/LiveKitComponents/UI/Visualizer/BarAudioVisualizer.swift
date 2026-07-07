@@ -195,6 +195,7 @@ extension BarAudioVisualizer {
             case .listening: 0.5
             case .thinking: 0.15
             case .speaking: veryLongDuration
+            @unknown default: 2 / Double(barCount)
             }
         }
 
@@ -204,6 +205,7 @@ extension BarAudioVisualizer {
             case .listening: barCount % 2 == 0 ? [[(barCount / 2) - 1, barCount / 2], []] : [[barCount / 2], []]
             case .thinking: Array((0 ..< barCount) + (0 ..< barCount).reversed()).map { HighlightedBars([$0]) }
             case .speaking: [HighlightedBars(0 ..< barCount)]
+            @unknown default: []
             }
         }
     }
