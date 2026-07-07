@@ -19,7 +19,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/whopio/client-sdk-swift.git", exact: "2.13.2-binary.3"),
+        .package(url: "https://github.com/whopio/client-sdk-swift.git", exact: "2.13.2-binary.4"),
         .package(url: "https://github.com/apple/swift-docc-plugin.git", from: "1.4.3"),
     ],
     targets: [
